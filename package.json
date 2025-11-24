@@ -1,0 +1,18 @@
+{
+  "name": "legal-consulting",
+  "version": "1.0.0",
+  "description": "Next.js frontend for UAE based legal consulting website",
+  "scripts": {
+    "build": "echo 'Static site - no build needed'",
+    "start": "echo 'Static site deployed on Vercel'"
+  },
+  "keywords": [
+    "legal",
+    "consulting",
+    "uae",
+    "dubai"
+  ],
+  "author": "",
+  "license": "MIT"
+}
+
