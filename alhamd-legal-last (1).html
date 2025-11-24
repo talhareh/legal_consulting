@@ -1,0 +1,2387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Elite Financial Recovery - Dubai's Premier Recovery Experts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Lora:wght@400;500;600;700&family=Crimson+Text:wght@400;600;700&family=EB+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        p, .service-card p, .about-text p, .testimonial-text, .contact-item p, .feature-box p, .process-step p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        body.font-roboto {
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+
+        body.font-opensans {
+            font-family: 'Open Sans', Arial, sans-serif;
+        }
+
+        body.font-lato {
+            font-family: 'Lato', Arial, sans-serif;
+        }
+
+        body.font-montserrat {
+            font-family: 'Montserrat', Arial, sans-serif;
+        }
+
+        body.font-merriweather {
+            font-family: 'Merriweather', Georgia, serif;
+        }
+
+        body.font-lora {
+            font-family: 'Lora', Georgia, serif;
+        }
+
+        body.font-crimson {
+            font-family: 'Crimson Text', Georgia, serif;
+        }
+
+        body.font-garamond {
+            font-family: 'EB Garamond', Georgia, serif;
+        }
+
+        body.font-playfair {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+
+        :root {
+            --primary-color: #1C1C1C;
+            --secondary-color: #2D2D2D;
+            --accent-color: #D4AF37;
+            --accent-secondary: #B68A35;
+            --text-light: #ffffff;
+            --bg-light: #f8f9fa;
+        }
+
+        body.theme-purple {
+            --primary-color: #6C63FF;
+            --secondary-color: #4834DF;
+            --accent-color: #FF6B6B;
+            --accent-secondary: #FFA502;
+        }
+
+        body.theme-gold {
+            --primary-color: #1C1C1C;
+            --secondary-color: #2D2D2D;
+            --accent-color: #D4AF37;
+            --accent-secondary: #B68A35;
+        }
+
+        body.theme-green {
+            --primary-color: #05386B;
+            --secondary-color: #379683;
+            --accent-color: #5CDB95;
+            --accent-secondary: #8EE4AF;
+        }
+
+        body.theme-navy {
+            --primary-color: #002B5B;
+            --secondary-color: #2B4865;
+            --accent-color: #00A8E8;
+            --accent-secondary: #00D9FF;
+        }
+
+        body.theme-burgundy {
+            --primary-color: #4A0E0E;
+            --secondary-color: #7B1E1E;
+            --accent-color: #C7522A;
+            --accent-secondary: #E74C3C;
+        }
+
+        .header {
+            background: transparent;
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: 0;
+            z-index: 1000;
+            box-shadow: none;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .header.scrolled {
+            padding: 0.75rem 0;
+            background: rgba(28, 28, 28, 0.9);
+            box-shadow: 0 4px 30px rgba(0,0,0,0.2);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+            position: relative;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            z-index: 1001;
+        }
+
+        .logo img {
+            height: 50px;
+            width: 50px;
+            margin-right: 15px;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            z-index: 1001;
+            transition: transform 0.3s;
+        }
+
+        .mobile-menu-toggle:active {
+            transform: scale(0.95);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+            padding: 0.5rem 0;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .nav-links a i {
+            margin-right: 0.5rem;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, rgba(28, 28, 28, 0.75) 0%, rgba(45, 45, 45, 0.75) 50%, rgba(28, 28, 28, 0.75) 100%),
+                        url('Dubaiheader (2).png') center/cover no-repeat;
+            color: white;
+            padding: 180px 2rem 100px;
+            padding-left: 8rem;
+            margin-top: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(243, 156, 18, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(231, 76, 60, 0.1) 0%, transparent 50%);
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 10% 20%, rgba(212, 175, 55, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(182, 138, 53, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 60%);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            33% { transform: translateY(-20px) rotate(1deg); }
+            66% { transform: translateY(-10px) rotate(-1deg); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.6; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.1); }
+        }
+
+        .floating-shapes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .shape {
+            position: absolute;
+            opacity: 0.1;
+        }
+
+        .shape:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            background: var(--accent-color);
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .shape:nth-child(2) {
+            width: 120px;
+            height: 120px;
+            background: var(--accent-secondary);
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            top: 60%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+
+        .shape:nth-child(3) {
+            width: 100px;
+            height: 100px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            bottom: 20%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+
+        @keyframes floatShape {
+            0%, 100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            25% {
+                transform: translate(30px, -30px) rotate(90deg);
+            }
+            50% {
+                transform: translate(-20px, 20px) rotate(180deg);
+            }
+            75% {
+                transform: translate(20px, 30px) rotate(270deg);
+            }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-family: 'Merriweather', 'Times New Roman', serif;
+            font-size: 4rem;
+            margin-bottom: 2.5rem;
+            font-weight: 700;
+            letter-spacing: 0.01em;
+            line-height: 1.15;
+        }
+
+        .hero-title-break {
+            display: block;
+        }
+
+        .hero-description-break {
+            display: inline;
+        }
+
+        .hero-subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .hero-separator {
+            width: 25%;
+            height: 2px;
+            background: var(--accent-color);
+            margin: 2.5rem 0 1.5rem 0;
+            border: none;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            margin-top: 3.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.85;
+            line-height: 1.6;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #B68A35;
+            color: white;
+            padding: 2px 12px;
+            text-decoration: none;
+            border-radius: 0;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: all 0.3s ease;
+            min-height: 22px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            touch-action: manipulation;
+            border: none;
+        }
+
+        .cta-button:hover {
+            background: #A67C2A;
+            opacity: 0.95;
+        }
+
+        .cta-button:active {
+            background: #956B1F;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section {
+            padding: 80px 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -10%;
+            width: 120%;
+            height: 100%;
+            background: linear-gradient(135deg, transparent 0%, rgba(212, 175, 55, 0.02) 50%, transparent 100%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .section > * {
+            position: relative;
+            z-index: 1;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        * {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+            position: relative;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .section-title.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+            transform: scaleX(0);
+            transition: transform 0.6s;
+        }
+
+        .section-title.animate::before {
+            transform: scaleX(1);
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
+            margin: 1rem auto;
+            transform: scaleX(0);
+            transition: transform 0.6s 0.3s;
+        }
+
+        .section-title.animate::after {
+            transform: scaleX(1);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(6, auto);
+            gap: 1.5rem;
+            margin-top: 3rem;
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .service-card {
+            grid-column: span 4;
+        }
+
+        .service-card:nth-child(1) {
+            grid-column: 1 / 6;
+            grid-row: 1;
+            transform: rotate(-1deg);
+        }
+
+        .service-card:nth-child(2) {
+            grid-column: 7 / 13;
+            grid-row: 1;
+            transform: rotate(1deg);
+            margin-top: 3rem;
+        }
+
+        .service-card:nth-child(3) {
+            grid-column: 2 / 7;
+            grid-row: 2;
+            transform: rotate(0.5deg);
+            margin-top: 2rem;
+        }
+
+        .service-card:nth-child(4) {
+            grid-column: 8 / 13;
+            grid-row: 2;
+            transform: rotate(-0.5deg);
+        }
+
+        .service-card:nth-child(5) {
+            grid-column: 1 / 5;
+            grid-row: 3;
+            transform: rotate(-1deg);
+            margin-top: 2rem;
+        }
+
+        .service-card:nth-child(6) {
+            grid-column: 6 / 10;
+            grid-row: 3;
+            transform: rotate(1deg);
+        }
+
+        .service-card:nth-child(7) {
+            grid-column: 11 / 13;
+            grid-row: 3;
+            transform: rotate(-0.5deg);
+            margin-top: 3rem;
+        }
+
+        .service-card:nth-child(8) {
+            grid-column: 3 / 8;
+            grid-row: 4;
+            transform: rotate(0.5deg);
+        }
+
+        .service-card:nth-child(9) {
+            grid-column: 9 / 13;
+            grid-row: 4;
+            transform: rotate(-1deg);
+            margin-top: 2rem;
+        }
+
+        body.layout-masonry .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-auto-rows: auto;
+            gap: 1.5rem;
+        }
+
+        body.layout-list .services-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        body.layout-carousel .services-grid {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 2rem;
+            padding-bottom: 20px;
+        }
+
+        body.layout-carousel .service-card {
+            min-width: 350px;
+            scroll-snap-align: start;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border-top: 4px solid var(--accent-color);
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        .service-card.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .service-card:hover::before {
+            left: 100%;
+        }
+
+        .service-card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .service-card:hover::after {
+            opacity: 1;
+        }
+
+        body.card-elevated .service-card {
+            box-shadow: 0 15px 50px rgba(0,0,0,0.15);
+            transform: translateY(-5px);
+        }
+
+        body.card-flat .service-card {
+            box-shadow: none;
+            border: 2px solid #e9ecef;
+        }
+
+        body.card-glassmorphism .service-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        body.card-bordered .service-card {
+            border: 3px solid var(--accent-color);
+            border-top: 3px solid var(--accent-color);
+        }
+
+        .service-card:hover {
+            transform: translateY(-15px) scale(1.02) rotate(0deg) !important;
+            box-shadow: 0 20px 50px rgba(212, 175, 55, 0.3);
+            border-top-width: 6px;
+            z-index: 10;
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: inline-block;
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.2) rotate(5deg);
+            color: var(--accent-secondary);
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+        }
+
+        body.icon-gradient .service-icon {
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        body.icon-circle .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin: 0 auto 1.5rem;
+        }
+
+        body.icon-square .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin: 0 auto 1.5rem;
+        }
+
+        body.icon-minimal .service-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .about-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-section::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            transform: rotate(45deg);
+        }
+
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            padding: 4rem 0;
+        }
+
+        .about-text {
+            position: relative;
+            z-index: 2;
+            max-width: 60%;
+            margin-left: auto;
+            padding: 3rem;
+            background: linear-gradient(135deg, rgba(248, 249, 250, 0.95), rgba(255, 255, 255, 0.95));
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            transform: rotate(-1deg);
+            transition: transform 0.3s;
+        }
+
+        .about-text:hover {
+            transform: rotate(0deg) scale(1.02);
+            z-index: 3;
+        }
+
+        .stats-grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 45%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            z-index: 1;
+        }
+
+        .stat-box {
+            position: relative;
+        }
+
+        .stat-box:nth-child(1) {
+            transform: rotate(2deg) translateY(2rem);
+        }
+
+        .stat-box:nth-child(2) {
+            transform: rotate(-1deg) translateY(-1rem);
+        }
+
+        .stat-box:nth-child(3) {
+            transform: rotate(-2deg) translateY(1rem);
+        }
+
+        .stat-box:nth-child(4) {
+            transform: rotate(1deg) translateY(-2rem);
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: #555;
+            font-size: 16px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .stat-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: scale(0.8);
+        }
+
+        .stat-box.animate {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .stat-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-color), var(--accent-secondary));
+            transform: scaleX(0);
+            transition: transform 0.4s;
+        }
+
+        .stat-box:hover::before {
+            transform: scaleX(1);
+        }
+
+        .stat-box:hover {
+            transform: scale(1.1) translateY(-10px) rotate(0deg) !important;
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3);
+            z-index: 10;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            transition: all 0.3s;
+        }
+
+        .stat-box:hover .stat-number {
+            transform: scale(1.1);
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+        }
+
+        .process-section {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .process-section .section-title {
+            color: white;
+        }
+
+        .process-steps {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 3rem;
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .process-step {
+            flex: 1;
+            min-width: 200px;
+            position: relative;
+        }
+
+        .process-step:nth-child(1) {
+            transform: translateX(-2rem) rotate(-2deg);
+            z-index: 4;
+        }
+
+        .process-step:nth-child(2) {
+            transform: translateX(-1rem) rotate(1deg);
+            z-index: 3;
+            margin-top: 3rem;
+        }
+
+        .process-step:nth-child(3) {
+            transform: translateX(1rem) rotate(-1deg);
+            z-index: 2;
+            margin-top: 1rem;
+        }
+
+        .process-step:nth-child(4) {
+            transform: translateX(2rem) rotate(2deg);
+            z-index: 1;
+            margin-top: 3rem;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .process-step.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .process-step::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.2) 0%, transparent 70%);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .process-step:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .process-step:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-10px) scale(1.05) rotate(0deg) !important;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            z-index: 10;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 1.5rem;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .step-number::before {
+            content: '';
+            position: absolute;
+            inset: -3px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
+            opacity: 0;
+            z-index: -1;
+            filter: blur(10px);
+            transition: opacity 0.4s;
+        }
+
+        .process-step:hover .step-number {
+            transform: scale(1.2) rotate(360deg);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
+        }
+
+        .process-step:hover .step-number::before {
+            opacity: 0.6;
+        }
+
+        .process-step h3 {
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .why-choose {
+            background: white;
+        }
+
+        .features-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 3rem;
+            position: relative;
+            padding: 3rem 0;
+        }
+
+        .feature-box {
+            flex: 1;
+            min-width: 280px;
+            max-width: 350px;
+            position: relative;
+        }
+
+        .feature-box:nth-child(odd) {
+            transform: rotate(-1deg);
+            margin-top: 2rem;
+        }
+
+        .feature-box:nth-child(even) {
+            transform: rotate(1deg);
+        }
+
+        .feature-box:nth-child(1) {
+            margin-left: 0;
+        }
+
+        .feature-box:nth-child(2) {
+            margin-left: 3rem;
+            margin-top: -1rem;
+        }
+
+        .feature-box:nth-child(3) {
+            margin-left: 1rem;
+        }
+
+        .feature-box:nth-child(4) {
+            margin-left: 4rem;
+            margin-top: -2rem;
+        }
+
+        .feature-box:nth-child(5) {
+            margin-left: 2rem;
+        }
+
+        .feature-box:nth-child(6) {
+            margin-left: 5rem;
+            margin-top: -1rem;
+        }
+
+        .feature-box:nth-child(7) {
+            margin-left: 1rem;
+        }
+
+        .feature-box:nth-child(8) {
+            margin-left: 3rem;
+            margin-top: -2rem;
+        }
+
+        .feature-box {
+            padding: 2rem;
+            background: linear-gradient(135deg, #f8f9fa, #fff);
+            border-radius: 15px;
+            border-left: 5px solid var(--accent-color);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateX(-30px);
+        }
+
+        .feature-box.animate {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .feature-box::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .feature-box:hover::after {
+            left: 100%;
+        }
+
+        .feature-box:hover {
+            transform: translateX(15px) scale(1.02) rotate(0deg) !important;
+            border-left-width: 8px;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+            z-index: 10;
+        }
+
+        .feature-box h4 i {
+            transition: transform 0.4s;
+        }
+
+        .feature-box:hover h4 i {
+            transform: scale(1.3) rotate(10deg);
+        }
+
+        .feature-box h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .testimonials {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+            color: white;
+        }
+
+        .testimonials .section-title {
+            color: white;
+        }
+
+        .testimonial-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: 3rem;
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .testimonial-card {
+            position: relative;
+            max-width: 80%;
+        }
+
+        .testimonial-card:nth-child(1) {
+            margin-left: 0;
+            transform: rotate(-1deg);
+        }
+
+        .testimonial-card:nth-child(2) {
+            margin-left: auto;
+            margin-right: 0;
+            transform: rotate(1deg);
+        }
+
+        .testimonial-card:nth-child(3) {
+            margin-left: 10%;
+            transform: rotate(-0.5deg);
+        }
+
+        .testimonial-card {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: scale(0.9);
+        }
+
+        .testimonial-card.animate {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: 10px;
+            font-size: 120px;
+            color: rgba(212, 175, 55, 0.1);
+            font-family: serif;
+            line-height: 1;
+            transition: all 0.4s;
+        }
+
+        .testimonial-card:hover::before {
+            transform: scale(1.2);
+            color: rgba(212, 175, 55, 0.2);
+        }
+
+        .testimonial-card:hover {
+            transform: scale(1.08) translateY(-10px) rotate(0deg) !important;
+            background: rgba(255,255,255,0.15);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+            z-index: 10;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+        }
+
+        .contact-grid {
+            display: flex;
+            gap: 3rem;
+            margin-top: 3rem;
+            position: relative;
+            align-items: flex-start;
+        }
+
+        .contact-info {
+            flex: 0 0 45%;
+            position: relative;
+            transform: rotate(-1deg);
+            z-index: 2;
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .contact-info:hover {
+            transform: rotate(0deg) scale(1.02);
+            z-index: 3;
+        }
+
+        .contact-form {
+            flex: 1;
+            position: relative;
+            transform: rotate(1deg);
+            margin-top: 3rem;
+            z-index: 1;
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .contact-form:hover {
+            transform: rotate(0deg) scale(1.02);
+            z-index: 3;
+        }
+
+        .contact-item {
+            margin-bottom: 2rem;
+        }
+
+        .contact-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .contact-item h4 i {
+            color: var(--accent-color);
+            margin-right: 10px;
+        }
+
+        .contact-item p {
+            color: #666;
+            font-size: 16px;
+        }
+
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            -webkit-appearance: none;
+            appearance: none;
+            min-height: 48px;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-button {
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary));
+            color: white;
+            padding: 12px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            min-height: 48px;
+            width: 100%;
+            touch-action: manipulation;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .submit-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .submit-button:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .submit-button:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.5);
+        }
+
+        .submit-button:active {
+            transform: translateY(-1px) scale(1);
+        }
+
+        .submit-button i {
+            transition: transform 0.3s;
+        }
+
+        .submit-button:hover i {
+            transform: translateX(5px);
+        }
+
+        .footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 3rem 2rem 1rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer p {
+            opacity: 0.8;
+            margin-top: 2rem;
+        }
+
+        /* Mobile Navigation Styles */
+        @media (max-width: 768px) {
+            html, body {
+                font-size: 14px;
+                line-height: 1.5;
+            }
+
+            p, li, .service-card p, .about-text p, .testimonial-text, .contact-item p, .feature-box p, .process-step p {
+                font-size: 0.95rem;
+                line-height: 1.5;
+            }
+
+            h1, h2, h3, h4, h5, h6 {
+                line-height: 1.2;
+            }
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 300px;
+                height: 100vh;
+                background: var(--primary-color);
+                flex-direction: column;
+                gap: 0;
+                padding: 80px 2rem 2rem;
+                transition: right 0.3s ease;
+                z-index: 1000;
+                box-shadow: -5px 0 20px rgba(0,0,0,0.3);
+                overflow-y: auto;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-links li {
+                width: 100%;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+
+            .nav-links a {
+                padding: 1rem 0;
+                font-size: 1.1rem;
+                width: 100%;
+            }
+
+            .nav-overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.5);
+                z-index: 999;
+                opacity: 0;
+                transition: opacity 0.3s;
+            }
+
+            .nav-overlay.active {
+                display: block;
+                opacity: 1;
+            }
+
+            .logo {
+                font-size: 1.4rem;
+            }
+
+            .logo img {
+                height: 40px;
+                width: 40px;
+                margin-right: 10px;
+            }
+
+            .logo span {
+                font-size: 0.9rem;
+            }
+
+            .nav-container {
+                padding: 0 1rem;
+                max-width: 100%;
+                width: 100%;
+            }
+
+            .header {
+                padding: 0.75rem 0;
+            }
+
+            .hero {
+                padding: 100px 0 60px;
+                margin-top: 0;
+                min-height: auto;
+                text-align: left;
+                width: 100%;
+                max-width: 100%;
+                align-items: flex-start;
+            }
+
+            .hero-content {
+                text-align: left;
+                padding: 0 1rem;
+                max-width: 100%;
+                width: 100%;
+                margin-top: 0;
+            }
+
+            .hero h1 {
+                font-size: 2.6rem;
+                line-height: 1.25;
+                margin-bottom: 2rem;
+                text-align: left;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+                margin-bottom: 0.75rem;
+                padding: 0;
+                text-align: left;
+            }
+
+            .hero-separator {
+                width: 25%;
+                margin: 2rem 0 1.2rem 0;
+            }
+
+            .hero-description-break {
+                display: block;
+            }
+
+            .hero-description {
+                font-size: 1rem;
+                margin-top: 2.5rem;
+                margin-bottom: 1.5rem;
+                padding: 0;
+                line-height: 1.5;
+                opacity: 0.9;
+                text-align: left;
+            }
+
+            .cta-button {
+                padding: 2px 10px;
+                font-size: 0.85rem;
+                width: auto;
+                max-width: none;
+                margin-left: 0;
+                text-transform: uppercase;
+            }
+
+            .section {
+                padding: 50px 0;
+                max-width: 100% !important;
+                width: 100%;
+            }
+
+            .section > * {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+                margin-bottom: 2rem;
+            }
+
+            .section-title::after {
+                width: 60px;
+                height: 3px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                gap: 1.5rem;
+                margin-top: 2rem;
+            }
+
+            .service-card {
+                grid-column: 1 !important;
+                grid-row: auto !important;
+                transform: none !important;
+                margin: 0 !important;
+            }
+
+            .service-card {
+                padding: 1.5rem;
+            }
+
+            .service-icon {
+                font-size: 2.5rem;
+            }
+
+            .service-card h3 {
+                font-size: 1.3rem;
+            }
+
+            .service-card p {
+                font-size: 16px;
+                line-height: 1.7;
+            }
+
+            .about-content {
+                flex-direction: column;
+            }
+
+            .about-text {
+                max-width: 100%;
+                margin: 0;
+                transform: none;
+            }
+
+            .stats-grid {
+                position: relative;
+                width: 100%;
+                margin-top: 2rem;
+            }
+
+            .stat-box {
+                transform: none !important;
+            }
+
+            .about-text h2 {
+                font-size: 1.8rem;
+            }
+
+            .about-text p {
+                font-size: 1rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .stat-box {
+                padding: 1.25rem;
+                margin: 0;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 120px;
+                height: 100%;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+                margin-bottom: 0.5rem;
+                line-height: 1.2;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 0.2rem;
+            }
+
+            .stat-number span {
+                font-size: 0.35em;
+                font-weight: normal;
+            }
+
+            .stat-label {
+                font-size: 1rem;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.5rem;
+                white-space: nowrap;
+                margin-top: 0.25rem;
+            }
+
+            .process-steps {
+                flex-direction: column;
+            }
+
+            .process-step {
+                transform: none !important;
+                margin: 0 !important;
+            }
+
+            .process-step {
+                padding: 1.5rem;
+            }
+
+            .step-number {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+            }
+
+            .features-grid {
+                flex-direction: column;
+            }
+
+            .feature-box {
+                max-width: 100%;
+                transform: none !important;
+                margin: 0 !important;
+            }
+
+            .feature-box {
+                padding: 1.5rem;
+            }
+
+            .feature-box h4 {
+                font-size: 1.2rem;
+            }
+
+            .testimonial-grid {
+                flex-direction: column;
+            }
+
+            .testimonial-card {
+                max-width: 100%;
+                margin: 0 !important;
+                transform: none !important;
+            }
+
+            .testimonial-card {
+                padding: 1.5rem;
+            }
+
+            .contact-grid {
+                flex-direction: column;
+            }
+
+            .contact-info,
+            .contact-form {
+                transform: none !important;
+                margin: 0 !important;
+            }
+
+            .contact-info,
+            .contact-form {
+                padding: 1.5rem;
+            }
+
+            .contact-item {
+                margin-bottom: 1.5rem;
+            }
+
+            .contact-item h4 {
+                font-size: 1.1rem;
+            }
+
+            .contact-item p {
+                font-size: 1rem;
+            }
+
+            .footer {
+                padding: 2rem 1rem 1rem;
+            }
+
+            .footer-content > div:first-child {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .footer-content > div:first-child > div {
+                text-align: center;
+            }
+
+            .footer-content > div:first-child ul {
+                text-align: center;
+            }
+
+            .footer-content > div:last-child > div {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-content > div:last-child > div > div {
+                margin-top: 1rem;
+            }
+
+            body.layout-carousel .service-card {
+                min-width: 85%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            html, body {
+                font-size: 13px;
+            }
+
+            p, li, .service-card p, .about-text p, .testimonial-text, .contact-item p, .feature-box p, .process-step p {
+                font-size: 0.9rem;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+                margin-bottom: 1.8rem;
+                text-align: left;
+            }
+
+            .hero-subtitle {
+                font-size: 0.95rem;
+                text-align: left;
+            }
+
+            .hero-separator {
+                width: 25%;
+                margin: 1.8rem 0 1rem 0;
+            }
+
+            .hero-description {
+                font-size: 0.95rem;
+                margin-top: 2rem;
+                padding: 0;
+                text-align: left;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .service-card,
+            .contact-info,
+            .contact-form {
+                padding: 1.25rem;
+            }
+
+            .logo span {
+                display: none;
+            }
+
+            .nav-links {
+                width: 85%;
+            }
+        }
+
+        @media (max-width: 360px) {
+            html, body {
+                font-size: 12px;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .cta-button {
+                font-size: 0.8rem;
+                padding: 1px 10px;
+                text-transform: uppercase;
+                width: auto;
+            }
+        }
+    </style>
+</head>
+<body class="theme-gold font-merriweather">
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%234A0E0E' stroke='%23D4AF37' stroke-width='2'/%3E%3Cpath d='M50 20 L55 30 L50 28 L45 30 Z' fill='%23D4AF37'/%3E%3Ctext x='50' y='38' font-family='serif' font-size='12' font-weight='bold' fill='%23D4AF37' text-anchor='middle'%3EALHAMD%3C/text%3E%3Ccircle cx='50' cy='55' r='15' fill='none' stroke='%23D4AF37' stroke-width='2'/%3E%3Cpath d='M45 55 L48 58 L55 51' stroke='%23D4AF37' stroke-width='2' fill='none'/%3E%3Cpath d='M52 48 L58 54' stroke='%23D4AF37' stroke-width='2'/%3E%3Cpath d='M56 54 L58 54 L58 52' stroke='%23D4AF37' stroke-width='2' fill='none'/%3E%3Ctext x='58' y='58' font-family='serif' font-size='8' fill='%23D4AF37'%3E%24%3C/text%3E%3Crect x='40' y='52' width='4' height='8' fill='%23D4AF37'/%3E%3Cellipse cx='42' cy='52' rx='2' ry='1' fill='%23D4AF37'/%3E%3Ctext x='50' y='78' font-family='serif' font-size='10' font-weight='bold' fill='%23D4AF37' text-anchor='middle'%3EFinancial%3C/text%3E%3Ctext x='50' y='86' font-family='serif' font-size='6' fill='%23D4AF37' text-anchor='middle'%3ERecovery Specialist%3C/text%3E%3Cpath d='M50 90 L55 95 L50 93 L45 95 Z' fill='%23D4AF37'/%3E%3C/svg%3E" alt="Alhamd Logo">
+                <span style="color: white; font-weight: 600; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Alhamd Legal Consultancy</span>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" id="mobileMenuToggle">
+                <i class="fas fa-bars" id="menuIcon"></i>
+            </button>
+            <div class="nav-overlay" id="navOverlay"></div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" onclick="closeMobileMenu()"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#services" onclick="closeMobileMenu()"><i class="fas fa-briefcase"></i> Services</a></li>
+                <li><a href="#about" onclick="closeMobileMenu()"><i class="fas fa-users"></i> About</a></li>
+                <li><a href="#process" onclick="closeMobileMenu()"><i class="fas fa-list-check"></i> Process</a></li>
+                <li><a href="#contact" onclick="closeMobileMenu()"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="floating-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+        <div class="hero-content" id="hero-section">
+            <h1>UAE's Premier Financial <span class="hero-title-break">Recovery Experts</span></h1>
+            <p class="hero-subtitle">Trusted legal expertise for asset recovery and bounced-cheque resolution across the UAE. Providing trusted financial recovery solutions to help businesses restore stability and cash flow.</p>
+            <div class="hero-separator"></div>
+            <p class="hero-description">Financial Recovery & Commercial <span class="hero-description-break">Dispute Settlement Expert</span></p>
+            <a href="#contact" class="cta-button">Get A Free Consultation</a>
+        </div>
+    </section>
+
+    <section class="section" id="services">
+        <div id="services-section">
+        <h2 class="section-title">Our Specialized Services</h2>
+        <p style="text-align: center; color: #666; font-size: 1.1rem; max-width: 800px; margin: 0 auto 3rem;">We provide comprehensive financial recovery solutions tailored to the unique needs of businesses and individuals in Dubai and across the UAE.</p>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-briefcase"></i></div>
+                <h3>Corporate Debt Recovery</h3>
+                <p>Specialized in recovering outstanding debts for businesses of all sizes. We handle B2B disputes, contract breaches, and unpaid invoices with a strategic approach that prioritizes your business relationships while ensuring maximum recovery.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-building-columns"></i></div>
+                <h3>Banking & Financial Claims</h3>
+                <p>Expert representation in banking disputes, loan defaults, and financial institution claims. We work with banks, financial institutions, and clients to resolve complex financial matters including mortgage disputes and credit card debts.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-building"></i></div>
+                <h3>Real Estate Recovery</h3>
+                <p>Comprehensive services for property-related financial disputes including developer defaults, rental disputes, property investment recovery, and construction payment claims across Dubai's real estate market.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-gavel"></i></div>
+                <h3>Legal Judgment Enforcement</h3>
+                <p>Professional enforcement of court judgments and arbitration awards. We ensure that winning a case translates into actual recovery through strategic asset tracing and execution procedures.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-magnifying-glass-dollar"></i></div>
+                <h3>Asset Tracing & Investigation</h3>
+                <p>Advanced asset tracing services to locate hidden or transferred assets. Our investigative team uses cutting-edge techniques and legal tools to uncover assets and build strong cases for recovery.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-handshake"></i></div>
+                <h3>Negotiation & Settlement</h3>
+                <p>Expert negotiation services to reach favorable settlements without lengthy litigation. Our skilled negotiators work to recover your funds through strategic dialogue and mediation.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-globe"></i></div>
+                <h3>International Recovery</h3>
+                <p>Cross-border financial recovery services for international disputes. We coordinate with legal partners globally to recover assets and debts across multiple jurisdictions.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-chart-pie"></i></div>
+                <h3>Insolvency & Restructuring</h3>
+                <p>Strategic guidance during insolvency proceedings to maximize creditor recovery. We represent creditors in bankruptcy cases and assist with debt restructuring for optimal outcomes.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-credit-card"></i></div>
+                <h3>Consumer Financial Recovery</h3>
+                <p>Dedicated services for individuals facing financial disputes including credit card defaults, personal loan recovery, and bounced cheque cases with compassionate yet effective representation.</p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="section about-section" id="about">
+        <div id="about-section">
+        <div class="about-content">
+            <div class="about-text">
+                <h2><i class="fas fa-award"></i> Leading Financial Recovery Experts in Dubai</h2>
+                <p>With over a decade of experience in Dubai's legal and financial landscape, we have established ourselves as the trusted partner for businesses and individuals seeking professional financial recovery services.</p>
+                <p>Based in the heart of Dubai's business district, our multilingual team serves clients across all emirates, handling cases in both local courts and international arbitration forums.</p>
+                <p>Our practice is built on three pillars: legal excellence, strategic thinking, and client-focused service. We don't just recover money – we restore financial stability and provide peace of mind.</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label"><i class="fas fa-trophy"></i> Success Rate</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">10M+</div>
+                    <div class="stat-label"><i class="fas fa-sack-dollar"></i> Recovered</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label"><i class="fas fa-file-invoice-dollar"></i> Cases Resolved</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label"><i class="fas fa-calendar-check"></i> Years Experience</div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="section process-section" id="process">
+        <div id="process-section">
+        <h2 class="section-title">Our Recovery Process</h2>
+        <div class="process-steps">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <h3>Initial Consultation</h3>
+                <p>Free assessment of your case and recovery potential</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <h3>Case Analysis</h3>
+                <p>Thorough review of documents and legal standing</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <h3>Strategy Development</h3>
+                <p>Customized recovery plan tailored to your situation</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <h3>Action & Recovery</h3>
+                <p>Implementation of legal actions and recovery procedures</p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="section why-choose">
+        <div id="why-choose-section">
+        <h2 class="section-title">Why Choose Alhamd Legal Consultancy</h2>
+        <div class="features-grid">
+            <div class="feature-box">
+                <h4><i class="fas fa-graduation-cap"></i> Expert Legal Team</h4>
+                <p>Our team comprises seasoned lawyers with specialized expertise in UAE commercial law, debt recovery, and financial litigation.</p>
+            </div>
+
+            <div class="feature-box">
+                <h4><i class="fas fa-earth-americas"></i> Local & International Reach</h4>
+                <p>Deep roots in Dubai's legal system combined with global partnerships enable us to handle both local and cross-border recovery cases.</p>
+            </div>
+
+            <div class="feature-box">
+                <h4><i class="fas fa-lightbulb"></i> Strategic Approach</h4>
+                <p>We combine legal action with business intelligence and negotiation skills to achieve the best outcomes while minimizing costs and time.</p>
+            </div>
+
+            <div class="feature-box">
+                <h4><i class="fas fa-lock"></i> Confidentiality Guaranteed</h4>
+                <p>Absolute discretion and confidentiality in all matters. Your financial information and case details are protected with the highest security standards.</p>
+            </div>
+
+            <div class="feature-box">
+                <h4><i class="fas fa-bolt"></i> Fast Response Time</h4>
+                <p>Rapid case assessment and quick action when timing is critical. We understand that delays in financial recovery can impact your business.</p>
+            </div>
+
+            <div class="feature-box">
+                <h4><i class="fas fa-dollar-sign"></i> Transparent Pricing</h4>
+                <p>Clear, upfront pricing with no hidden fees. We offer flexible fee structures including contingency arrangements where appropriate.</p>
+            </div>
+
+            <div class="feature-box">
+                <h4><i class="fas fa-language"></i> Multilingual Service</h4>
+                <p>Services available in English, Arabic, Hindi, Urdu, and other languages to serve Dubai's diverse community effectively.</p>
+            </div>
+
+            <div class="feature-box">
+                <h4><i class="fas fa-headset"></i> 24/7 Client Support</h4>
+                <p>Round-the-clock support for urgent matters. Your dedicated case manager is always accessible to address concerns and provide updates.</p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="section testimonials">
+        <div id="testimonials-section">
+        <h2 class="section-title">Client Success Stories</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <p class="testimonial-text">"After years of trying to recover AED 1.2 million from a defaulting client, Alhamd Legal Consultancy achieved full recovery within 8 months. Their strategic approach made all the difference."</p>
+                <p class="testimonial-author">- Ahmed K., Trading Company Owner</p>
+            </div>
+
+            <div class="testimonial-card">
+                <p class="testimonial-text">"I was facing a complex real estate dispute with a developer. The team not only recovered my investment but also secured additional compensation. Their professionalism gave me complete peace of mind."</p>
+                <p class="testimonial-author">- Sarah M., Property Investor</p>
+            </div>
+
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Professional, efficient, and results-driven. They handled my international debt recovery case with expertise, coordinating across three jurisdictions. The recovery exceeded our expectations."</p>
+                <p class="testimonial-author">- Rajesh P., Import/Export Business</p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+        <div id="contact-section">
+        <h2 class="section-title">Get Your Free Consultation</h2>
+        <p style="text-align: center; color: #666; font-size: 1.1rem; max-width: 800px; margin: 0 auto 3rem;">Take the first step towards recovering your financial assets. Our experts are ready to evaluate your case at no cost.</p>
+        
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h4><i class="fas fa-location-dot"></i> Office Location</h4>
+                    <p>Business Bay, Dubai<br>United Arab Emirates</p>
+                </div>
+
+                <div class="contact-item">
+                    <h4><i class="fas fa-phone"></i> Phone</h4>
+                    <p>+971 4 XXX XXXX<br>+971 50 XXX XXXX</p>
+                </div>
+
+                <div class="contact-item">
+                    <h4><i class="fas fa-envelope"></i> Email</h4>
+                    <p>info@alhamdlegal.ae<br>consult@alhamdlegal.ae</p>
+                </div>
+
+                <div class="contact-item">
+                    <h4><i class="fas fa-clock"></i> Business Hours</h4>
+                    <p>Sunday - Thursday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 2:00 PM<br>Friday: Closed</p>
+                </div>
+
+                <div class="contact-item">
+                    <h4><i class="fas fa-map"></i> Coverage Area</h4>
+                    <p>Dubai, Abu Dhabi, Sharjah, and all UAE Emirates. International cases accepted.</p>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <form onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="case-type">Type of Case</label>
+                        <input type="text" id="case-type" name="case-type" placeholder="e.g., Corporate Debt, Real Estate, Banking">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Case Details *</label>
+                        <textarea id="message" name="message" required placeholder="Please provide a brief description of your situation..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-button"><i class="fas fa-paper-plane"></i> Request Free Consultation</button>
+                </form>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; text-align: left; margin-bottom: 3rem;">
+                <div>
+                    <h3 style="margin-bottom: 1rem; color: var(--accent-color);"><i class="fas fa-scale-balanced"></i> Alhamd Legal Consultancy</h3>
+                    <p style="opacity: 0.9; line-height: 1.8;">Dubai's premier financial recovery consultancy. We combine legal expertise with strategic financial planning to deliver exceptional results.</p>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="#" style="color: white; font-size: 1.5rem; margin-right: 15px;"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" style="color: white; font-size: 1.5rem; margin-right: 15px;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="color: white; font-size: 1.5rem; margin-right: 15px;"><i class="fab fa-facebook"></i></a>
+                        <a href="#" style="color: white; font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 style="margin-bottom: 1rem; color: var(--accent-color);"><i class="fas fa-briefcase"></i> Our Services</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.8rem;"><a href="#services" style="color: white; text-decoration: none; opacity: 0.8;">Corporate Debt Recovery</a></li>
+                        <li style="margin-bottom: 0.8rem;"><a href="#services" style="color: white; text-decoration: none; opacity: 0.8;">Banking & Financial Claims</a></li>
+                        <li style="margin-bottom: 0.8rem;"><a href="#services" style="color: white; text-decoration: none; opacity: 0.8;">Real Estate Recovery</a></li>
+                        <li style="margin-bottom: 0.8rem;"><a href="#services" style="color: white; text-decoration: none; opacity: 0.8;">Asset Tracing</a></li>
+                        <li style="margin-bottom: 0.8rem;"><a href="#services" style="color: white; text-decoration: none; opacity: 0.8;">International Recovery</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 style="margin-bottom: 1rem; color: var(--accent-color);"><i class="fas fa-link"></i> Quick Links</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.8rem;"><a href="#about" style="color: white; text-decoration: none; opacity: 0.8;">About Us</a></li>
+                        <li style="margin-bottom: 0.8rem;"><a href="#process" style="color: white; text-decoration: none; opacity: 0.8;">Our Process</a></li>
+                        <li style="margin-bottom: 0.8rem;"><a href="#contact" style="color: white; text-decoration: none; opacity: 0.8;">Contact Us</a></li>
+                        <li style="margin-bottom: 0.8rem;"><a href="#" style="color: white; text-decoration: none; opacity: 0.8;">Case Studies</a></li>
+                        <li style="margin-bottom: 0.8rem;"><a href="#" style="color: white; text-decoration: none; opacity: 0.8;">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 style="margin-bottom: 1rem; color: var(--accent-color);"><i class="fas fa-location-dot"></i> Contact Info</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem; opacity: 0.9; line-height: 1.6;">
+                            <i class="fas fa-map-marker-alt" style="color: var(--accent-color); margin-right: 8px;"></i>
+                            Business Bay, Dubai<br>
+                            <span style="margin-left: 22px;">United Arab Emirates</span>
+                        </li>
+                        <li style="margin-bottom: 1rem; opacity: 0.9;">
+                            <i class="fas fa-phone" style="color: var(--accent-color); margin-right: 8px;"></i>
+                            +971 4 XXX XXXX
+                        </li>
+                        <li style="margin-bottom: 1rem; opacity: 0.9;">
+                            <i class="fas fa-envelope" style="color: var(--accent-color); margin-right: 8px;"></i>
+                            info@alhamdlegal.ae
+                        </li>
+                        <li style="opacity: 0.9;">
+                            <i class="fas fa-clock" style="color: var(--accent-color); margin-right: 8px;"></i>
+                            Sun-Thu: 9AM - 6PM
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; margin-top: 2rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                    <p style="opacity: 0.8; margin: 0;">&copy; 2025 Alhamd Legal Consultancy. All Rights Reserved.</p>
+                    <div>
+                        <a href="#" style="color: white; text-decoration: none; opacity: 0.8; margin-right: 20px;">Privacy Policy</a>
+                        <a href="#" style="color: white; text-decoration: none; opacity: 0.8; margin-right: 20px;">Terms of Service</a>
+                        <a href="#" style="color: white; text-decoration: none; opacity: 0.8;">Legal Disclaimer</a>
+                    </div>
+                </div>
+                <p style="opacity: 0.7; margin-top: 1rem; font-size: 0.9rem; text-align: center;">Licensed by Dubai Legal Affairs Department | Member of UAE Financial Recovery Association</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Thank you for your inquiry! We will contact you shortly.');
+            event.target.reset();
+        }
+
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const navLinks = document.getElementById('navLinks');
+        const navOverlay = document.getElementById('navOverlay');
+        const menuIcon = document.getElementById('menuIcon');
+
+        function toggleMobileMenu() {
+            navLinks.classList.toggle('active');
+            navOverlay.classList.toggle('active');
+            const isActive = navLinks.classList.contains('active');
+            menuIcon.className = isActive ? 'fas fa-times' : 'fas fa-bars';
+            document.body.style.overflow = isActive ? 'hidden' : '';
+        }
+
+        function closeMobileMenu() {
+            navLinks.classList.remove('active');
+            navOverlay.classList.remove('active');
+            menuIcon.className = 'fas fa-bars';
+            document.body.style.overflow = '';
+        }
+
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+        }
+
+        if (navOverlay) {
+            navOverlay.addEventListener('click', closeMobileMenu);
+        }
+
+        // Close menu on window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                closeMobileMenu();
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && href !== '') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        const headerOffset = 80;
+                        const elementPosition = target.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Prevent zoom on double tap (iOS)
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', function (event) {
+            const now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedElements = document.querySelectorAll('.service-card, .stat-box, .process-step, .feature-box, .testimonial-card, .section-title');
+            animatedElements.forEach(el => observer.observe(el));
+
+            // Animate section titles immediately if in view
+            const sectionTitles = document.querySelectorAll('.section-title');
+            sectionTitles.forEach(title => {
+                const rect = title.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    setTimeout(() => title.classList.add('animate'), 100);
+                }
+            });
+        });
+
+        // Counter animation for statistics
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16);
+            const isPercentage = target.toString().includes('%');
+            const isCurrency = target.toString().includes('AED') || target.toString().includes('$');
+            const numericTarget = parseFloat(target.toString().replace(/[^\d.]/g, ''));
+
+            function updateCounter() {
+                start += increment;
+                if (start < numericTarget) {
+                    if (isPercentage) {
+                        element.textContent = Math.floor(start) + '%';
+                    } else if (isCurrency) {
+                        element.textContent = 'AED ' + Math.floor(start / 1000000) + 'M+';
+                    } else if (target.toString().includes('+')) {
+                        element.textContent = Math.floor(start) + '+';
+                    } else {
+                        element.textContent = Math.floor(start);
+                    }
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = target;
+                }
+            }
+            updateCounter();
+        }
+
+        // Observe stat boxes for counter animation
+        const statObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+                    entry.target.classList.add('counted');
+                    const statNumber = entry.target.querySelector('.stat-number');
+                    if (statNumber) {
+                        const target = statNumber.textContent.trim();
+                        statNumber.textContent = '0';
+                        setTimeout(() => {
+                            animateCounter(statNumber, target);
+                        }, 200);
+                    }
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const statBoxes = document.querySelectorAll('.stat-box');
+            statBoxes.forEach(box => statObserver.observe(box));
+        });
+
+        // Stagger animation for service cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const serviceCards = document.querySelectorAll('.service-card');
+            serviceCards.forEach((card, index) => {
+                card.style.transitionDelay = `${index * 0.1}s`;
+            });
+        });
+
+    </script>
+
+</body>
+</html>
+                        
